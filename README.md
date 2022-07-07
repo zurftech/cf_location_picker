@@ -1,4 +1,4 @@
-## Captain Fresh Location picker for the ease the process of choose the location by user.
+## Google Map Location picker for the ease the process of choose the location by user.
 
 ## Features
 
