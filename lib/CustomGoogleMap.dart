@@ -32,7 +32,7 @@ class _LocationPickerGoogleMapState extends State<LocationPickerGoogleMap> {
             resizeToAvoidBottomInset: false,
             appBar: AppBar(
               title: Text("Location Picker"),
-              backgroundColor: PluginColors.primary,
+              backgroundColor:customGoogleMapBloc.getThemeColor(),
             ),
             body: Stack(children: [
               GoogleMap(
@@ -125,9 +125,9 @@ class _LocationPickerGoogleMapState extends State<LocationPickerGoogleMap> {
                           child:   Container(
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: PluginColors.primary,
+                              color: customGoogleMapBloc.getThemeColor(),
                               // color: CfColors.primary,
-                              border: Border.all(width: 1, color: PluginColors.primary),
+                              border: Border.all(width: 1, color: customGoogleMapBloc.getThemeColor()!),
                               borderRadius: BorderRadius.circular(
                                 10,
                               ),

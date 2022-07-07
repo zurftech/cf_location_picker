@@ -8,6 +8,7 @@ import 'package:google_maps_webservice/places.dart';
 import 'package:location_picker/app_util.dart';
 import 'package:location_picker/pick_result.dart';
 import 'package:location_picker/place_picker.dart';
+import 'package:location_picker/plugin_colors.dart';
 import 'package:location_picker/search_place_result_response.dart'
     as searchResultResModel;
 import 'package:permission_handler/permission_handler.dart';
@@ -27,6 +28,8 @@ class CustomGoogleMapBloc {
   List<searchResultResModel.Prediction> _placeList = [];
   String? _googleApiKey;
   PickResult? _result;
+
+  Color? _themeColor = PluginColors.primary;
 
   final BehaviorSubject<bool> _loadingController =
       BehaviorSubject<bool>.seeded(false);
@@ -67,6 +70,16 @@ class CustomGoogleMapBloc {
   String? _locationAddress = "";
 
   /*Setter & Getter For Context*/
+
+  void setThemeColor({required Color? themeColor}) {
+    this._themeColor = themeColor;
+  }
+
+  Color? getThemeColor() {
+    return _themeColor;
+  }
+
+
 
   void setBuildContext({required BuildContext? buildContext}) {
     this._buildContext = buildContext;

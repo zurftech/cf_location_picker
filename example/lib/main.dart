@@ -7,6 +7,7 @@ import 'package:location_picker/app_util.dart';
 import 'package:location_picker/location_picker.dart';
 import 'package:location_picker/pick_result.dart';
 import 'package:location_picker/place_picker.dart';
+import 'package:location_picker/plugin_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,6 +77,7 @@ class FirstScreen extends StatelessWidget
                    PluginUtil.printAppLog(logValue:'i am called ${pickResult.formattedAddress}');
                  },
                  buildContext: context,
+                 themeColor: PluginColors.primary,
                googleApiKey: ""
              );
            },

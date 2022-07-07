@@ -13,11 +13,13 @@ class PlacePicker {
       {required LatLng initialPoint,
       required BuildContext buildContext,
       required Function result,
-      required String googleApiKey
+      required String googleApiKey,
+        required Color themeColor
       }) {
     customGoogleMapBloc.setIntialLocation(intialLocation: initialPoint);
    customGoogleMapBloc.setBuildContext(buildContext: buildContext);
    customGoogleMapBloc.setGoogleKey(googleKey: googleApiKey);
+   customGoogleMapBloc.setThemeColor(themeColor: themeColor);
    PluginUtil.setBuildContext(context: buildContext);
     pickResult=result;
     Navigator.push(buildContext,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:location_picker/app_util.dart';
+import 'package:location_picker/custom_google_map_bloc.dart';
 import 'package:location_picker/plugin_colors.dart';
 import 'package:location_picker/text_styles.dart';
 
@@ -53,7 +54,7 @@ Widget cfCircularButton({
             ),
       style: ButtonStyle(
         backgroundColor:
-            MaterialStateProperty.all<Color>(color ?? PluginColors.primary),
+            MaterialStateProperty.all<Color>(color ?? customGoogleMapBloc.getThemeColor()!),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(cornerRadius ?? 50),
